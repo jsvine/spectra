@@ -1,7 +1,6 @@
-from spectra.color import Color, COLOR_SPACES
-from spectra.scale import Scale
+from spectra.core import COLOR_SPACES, Color, Scale
 
-VERSION_TUPLE = (0, 0, 0)
+VERSION_TUPLE = (0, 0, 1)
 VERSION = ".".join(map(str, VERSION_TUPLE))
 
 lab = lambda *args: Color("lab", *args)
@@ -12,3 +11,6 @@ cmy = lambda *args: Color("cmy", *args)
 hsl = lambda *args: Color("hsl", *args)
 hsv = lambda *args: Color("hsv", *args)
 html = lambda string: Color.from_html(string)
+
+scale = lambda colors: Scale(colors)
+range = lambda colors, count: Scale(colors).range(count)
