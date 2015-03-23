@@ -18,6 +18,9 @@ class Color(object):
         self.values = values
         self.space = space
         self.color_object = COLOR_SPACES[space](*values)
+        _rgb = self.color_object if space == "rgb" else self.to("rgb").color_object
+        self.rgb = _rgb.get_value_tuple()
+        self.clamped_rgb = (_rgb.clamped_rgb_r, _rgb.clamped_rgb_g, _rgb.clamped_rgb_b)
     
     @classmethod
     def from_html(cls, html_string):
@@ -30,17 +33,8 @@ class Color(object):
         return self.__class__(space, *new_color.get_value_tuple())
     
     @property
-    def rgb(self):
-        if self.space == "rgb":
-            return self.values
-        rgb = self.to("rgb").color_object
-        return (rgb.clamped_rgb_r, rgb.clamped_rgb_g, rgb.clamped_rgb_b)
-        
-    @property
     def hexcode(self):
-        if self.space == "rgb":
-            return self.color_object.get_rgb_hex()
-        return self.__class__("rgb", *self.rgb).hexcode
+        return COLOR_SPACES["rgb"](*self.clamped_rgb).get_rgb_hex()
         
     def blend(self, other, ratio=0.5):
         keep = 1.0 - ratio
