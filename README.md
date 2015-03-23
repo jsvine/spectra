@@ -8,10 +8,10 @@ Spectra is a Python library that makes color math, color scales, and color-space
 - Brightening/darkening colors
 - Saturating/desaturating colors
 - Conversion to/from multiple [color spaces](http://en.wikipedia.org/wiki/Color_space):
-    - `rgb`
+    - `rgb` (specifically: [sRGB](http://en.wikipedia.org/wiki/SRGB))
     - `hsl`
     - `hsv`
-    - `lab`
+    - `lab` ([CIELAB](http://en.wikipedia.org/wiki/Lab_color_space#CIELAB))
     - `lch` (a.k.a. `hcl`)
     - `cmy`
     - `cmyk`
