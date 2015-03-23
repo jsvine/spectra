@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="spectra",
-    version="0.0.1",
+    version="0.0.2",
     description="Color scales and color conversion made easy for Python.",
     long_description="",
     classifiers=[
