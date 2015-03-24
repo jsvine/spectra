@@ -4,6 +4,7 @@ VERSION_TUPLE = (0, 0, 2)
 VERSION = ".".join(map(str, VERSION_TUPLE))
 
 lab = lambda *args: Color("lab", *args)
+lch = lambda *args: Color("lch", *args)
 xyz = lambda *args: Color("xyz", *args)
 rgb = lambda *args: Color("rgb", *args)
 cmyk = lambda *args: Color("cmyk", *args)
