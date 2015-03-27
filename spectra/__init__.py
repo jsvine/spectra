@@ -1,6 +1,6 @@
 from spectra.core import COLOR_SPACES, Color, Scale
 
-VERSION_TUPLE = (0, 0, 4)
+VERSION_TUPLE = (0, 0, 5)
 VERSION = ".".join(map(str, VERSION_TUPLE))
 
 lab = lambda *args: Color("lab", *args)
