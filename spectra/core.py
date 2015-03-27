@@ -21,6 +21,7 @@ class Color(object):
         _rgb = self.color_object if space == "rgb" else self.to("rgb").color_object
         self.rgb = _rgb.get_value_tuple()
         self.clamped_rgb = (_rgb.clamped_rgb_r, _rgb.clamped_rgb_g, _rgb.clamped_rgb_b)
+        self.rbg_clamped = self.clamped_rgb
     
     @classmethod
     def from_html(cls, html_string):
