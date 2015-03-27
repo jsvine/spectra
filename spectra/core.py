@@ -1,5 +1,5 @@
 from colormath import color_objects, color_conversions
-from grapefruit import Color as GC
+from spectra.grapefruit import Color as GC
 convert_color = color_conversions.convert_color
 
 COLOR_SPACES = {
@@ -98,5 +98,5 @@ class Scale(object):
         dom = self._domain
         distance = dom[-1] - dom[0]
         props = [ self(dom[0] + distance * float(x)/(count-1))
-            for x in xrange(count) ]
+            for x in range(count) ]
         return props
