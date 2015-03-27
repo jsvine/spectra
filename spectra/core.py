@@ -65,8 +65,10 @@ class Color(object):
 
 class Scale(object):
     def __init__(self, colors, domain=None, mapping=None):
-        self.colors = colors
-        n = len(colors)
+        _colors = [ c if isinstance(c, Color) else Color.from_html(c)
+            for c in colors ]
+        self.colors = _colors
+        n = len(_colors)
         self._domain = domain or [ float(x) / (n - 1) for x in range(n) ]
         self._mapping = mapping or (lambda x: x)
         
