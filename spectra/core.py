@@ -159,9 +159,15 @@ class Scale(object):
         _colors = [ c if isinstance(c, Color) else Color.from_html(c)
             for c in colors ]
         self.colors = _colors
+
+        # Set domain
         n = len(_colors)
         self._domain = domain or [ float(x) / (n - 1) for x in range(n) ]
-        
+
+        # Check whether domain is correct length.
+        if len(self._domain) != n:
+            raise ValueError("len(domain) must equal len(colors)")
+
     def __call__(self, number):
         """
         Return the color corresponding to the given `number`.
