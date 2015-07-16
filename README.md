@@ -19,7 +19,7 @@ pip install spectra
 
 ## Walkthrough
 
-See [this walkthrough](http://nbviewer.ipython.org/github/jsvine/spectra/blob/master/docs/walkthrough.ipynb) to see what Spectra can do.
+See [this walkthrough](docs/walkthrough.ipynb) to see what Spectra can do.
 
 ## API
 
