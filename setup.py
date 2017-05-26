@@ -1,9 +1,20 @@
-import sys
+import sys, os
 from setuptools import setup, find_packages
+import subprocess
+
+NAME = "spectra"
+HERE = os.path.abspath(os.path.dirname(__file__))
+
+version_ns = {}
+with open(os.path.join(HERE, NAME, "_version.py")) as f:
+    exec(f.read(), {}, version_ns)
+
+with open(os.path.join(HERE, "requirements.txt")) as f:
+    reqs = f.read().strip().split("\n")
 
 setup(
-    name="spectra",
-    version="0.0.7",
+    name=NAME,
+    version=version_ns["__version__"],
     description="Color scales and color conversion made easy for Python.",
     long_description="",
     classifiers=[
@@ -24,9 +35,7 @@ setup(
     namespace_packages=[],
     include_package_data=False,
     zip_safe=False,
-    install_requires=[
-        "colormath",
-    ],
+    install_requires=reqs,
     tests_require=[],
     test_suite="test"
 )

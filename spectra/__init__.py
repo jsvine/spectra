@@ -1,7 +1,5 @@
-from spectra.core import COLOR_SPACES, Color, Scale
-
-VERSION_TUPLE = (0, 0, 7)
-VERSION = ".".join(map(str, VERSION_TUPLE))
+from .core import COLOR_SPACES, Color, Scale
+from ._version import __version__
 
 def lab(L, a, b):
     """
