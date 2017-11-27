@@ -1,1 +1,2 @@
-colormath
+networkx==1.11
+colormath==2.1.1
