@@ -1175,7 +1175,7 @@ class Color:
 
   @staticmethod
   def NewFromRgb(r, g, b, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed RGB values.
+    '''Create a new instance based on the specified RGB values.
 
     Parameters:
       :r:
@@ -1202,7 +1202,7 @@ class Color:
 
   @staticmethod
   def NewFromHsl(h, s, l, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed HSL values.
+    '''Create a new instance based on the specified HSL values.
 
     Parameters:
       :h:
@@ -1229,7 +1229,7 @@ class Color:
 
   @staticmethod
   def NewFromHsv(h, s, v, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed HSV values.
+    '''Create a new instance based on the specified HSV values.
 
     Parameters:
       :h:
@@ -1257,7 +1257,7 @@ class Color:
 
   @staticmethod
   def NewFromYiq(y, i, q, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed YIQ values.
+    '''Create a new instance based on the specified YIQ values.
 
     Parameters:
       :y:
@@ -1284,7 +1284,7 @@ class Color:
 
   @staticmethod
   def NewFromYuv(y, u, v, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed YUV values.
+    '''Create a new instance based on the specified YUV values.
 
     Parameters:
       :y:
@@ -1311,7 +1311,7 @@ class Color:
 
   @staticmethod
   def NewFromXyz(x, y, z, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed CIE-XYZ values.
+    '''Create a new instance based on the specified CIE-XYZ values.
 
     Parameters:
       :x:
@@ -1338,7 +1338,7 @@ class Color:
 
   @staticmethod
   def NewFromLab(l, a, b, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed CIE-LAB values.
+    '''Create a new instance based on the specified CIE-LAB values.
 
     Parameters:
       :l:
@@ -1369,7 +1369,7 @@ class Color:
 
   @staticmethod
   def NewFromCmy(c, m, y, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed CMY values.
+    '''Create a new instance based on the specified CMY values.
 
     Parameters:
       :c:
@@ -1396,7 +1396,7 @@ class Color:
 
   @staticmethod
   def NewFromCmyk(c, m, y, k, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed CMYK values.
+    '''Create a new instance based on the specified CMYK values.
 
     Parameters:
       :c:
@@ -1425,7 +1425,7 @@ class Color:
 
   @staticmethod
   def NewFromHtml(html, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed HTML color definition.
+    '''Create a new instance based on the specified HTML color definition.
 
     Parameters:
       :html:
@@ -1456,7 +1456,7 @@ class Color:
 
   @staticmethod
   def NewFromPil(pil, alpha=1.0, wref=_DEFAULT_WREF):
-    '''Create a new instance based on the specifed PIL color.
+    '''Create a new instance based on the specified PIL color.
 
     Parameters:
       :pil:
@@ -1906,7 +1906,7 @@ class Color:
 
     Parameters:
       :angle:
-        The angle to substract from the adjacent colors hues [-90...90].
+        The angle to subtract from the adjacent colors hues [-90...90].
         You can use an angle of zero to generate a square tetrad.
       :mode:
         Select which color wheel to use for the generation (ryb/rgb).
