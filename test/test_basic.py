@@ -1,5 +1,5 @@
 import spectra
-import nose
+import pytest
 
 def test_polylinear():
     """
@@ -13,8 +13,8 @@ def test_polylinear():
     goal = ['#ffff00', '#ff8000', '#ff0000', '#800000', '#000000']
     assert(results == goal)
 
-@nose.tools.raises(ValueError)
 def test_polylinear_fail():
-    colors = ['yellow', 'red', 'black']
-    domain = [ 0, 50 ] # Domain has one too few items
-    spectra.scale(colors).domain(domain)
+    with pytest.raises(ValueError):
+        colors = ['yellow', 'red', 'black']
+        domain = [ 0, 50 ] # Domain has one too few items
+        spectra.scale(colors).domain(domain)
