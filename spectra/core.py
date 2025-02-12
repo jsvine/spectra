@@ -1,4 +1,4 @@
-from colormath import color_objects, color_conversions
+from colormath2 import color_objects, color_conversions
 from spectra.grapefruit import Color as GC
 convert_color = color_conversions.convert_color
 
@@ -28,7 +28,7 @@ class Color(object):
         self.rgb = _rgb.get_value_tuple()
         self.clamped_rgb = (_rgb.clamped_rgb_r, _rgb.clamped_rgb_g, _rgb.clamped_rgb_b)
         self.rbg_clamped = self.clamped_rgb
-    
+
     @classmethod
     def from_html(cls, html_string):
         """
@@ -54,7 +54,7 @@ class Color(object):
         if space == self.space: return self
         new_color = convert_color(self.color_object, COLOR_SPACES[space])
         return self.__class__(space, *new_color.get_value_tuple())
-    
+
     @property
     def hexcode(self):
         """
@@ -64,7 +64,7 @@ class Color(object):
         :returns: A six-character string.
         """
         return COLOR_SPACES["rgb"](*self.clamped_rgb).get_rgb_hex()
-        
+
     def blend(self, other, ratio=0.5):
         """
         Blend this color with another color in the same color space.
@@ -187,10 +187,10 @@ class Scale(object):
                 num_range = x1 - x0
                 prop = float(number - x0) / num_range
                 return self.colors[i].blend(self.colors[i+1], prop)
-    
+
     def domain(self, domain):
         """
-        Create a new scale with the given domain. 
+        Create a new scale with the given domain.
 
         :param list domain: A list of floats.
 
