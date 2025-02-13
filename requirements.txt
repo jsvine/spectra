@@ -1,1 +1,1 @@
-colormath>=3.0.0
+colormath2>=3.0.0
