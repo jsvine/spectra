@@ -9,7 +9,7 @@ Spectra is a Python library that makes color math, color scales, and color-space
 - Saturating/desaturating colors
 - Conversion to/from multiple [color spaces](http://en.wikipedia.org/wiki/Color_space)
 
-Spectra is built on [colormath](http://python-colormath.readthedocs.org/) and [grapefruit](https://github.com/xav/Grapefruit). Spectra is *enormously* inspired by [chroma.js](https://github.com/gka/chroma.js) and [d3's scales](https://github.com/mbostock/d3/wiki/Quantitative-Scales).
+Spectra is built on [colormath2](https://github.com/bkmgit/python-colormath2) and [grapefruit](https://github.com/xav/Grapefruit). Spectra is *enormously* inspired by [chroma.js](https://github.com/gka/chroma.js) and [d3's scales](https://github.com/mbostock/d3/wiki/Quantitative-Scales).
 
 ## Installation
 
